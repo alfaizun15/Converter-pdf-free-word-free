@@ -7,13 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
   <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    body {
       background-color: #f8f9fa; /* Warna latar belakang */
     }
     .header {
@@ -21,11 +15,10 @@
       color: white;
       padding: 20px;
       text-align: center;
-      width: 100%;
-      border-radius: 10px 10px 0 0; /* Sudut melengkung */
+      border-radius: 10px; /* Sudut melengkung */
+      margin-bottom: 20px; /* Jarak bawah header */
     }
     .button-container {
-      margin: 20px 0;
       text-align: center;
       flex-wrap: wrap; /* Agar tombol bisa dibungkus jika terlalu banyak */
     }
@@ -40,76 +33,68 @@
       transform: scale(1.05); /* Efek zoom saat hover */
     }
     .additional-info {
-      margin-top: 30px;
       text-align: center;
       padding: 20px;
       background-color: #ffffff; /* Warna latar belakang putih */
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 600px; /* Lebar maksimum untuk info tambahan */
-      width: 90%; /* Lebar 90% dari tampilan untuk perangkat kecil */
+      max-width: 800px; /* Lebar maksimum untuk info tambahan */
+      margin: 0 auto; /* Pusatkan di halaman */
     }
     .icon {
       font-size: 40px; /* Ukuran ikon */
       color: #d9534f; /* Warna ikon */
     }
     .footer {
-      margin-top: auto;
       padding: 10px;
       text-align: center;
       font-size: 0.9em;
     }
-    @media (max-width: 576px) {
-      .header h1 {
-        font-size: 1.5em; /* Ukuran font judul lebih kecil pada perangkat kecil */
-      }
-      .btn {
-        width: 100%; /* Tombol menggunakan lebar penuh pada perangkat kecil */
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>File Converter</h1>
-    <p>Simple and fast file conversion</p>
-  </div>
-  <div class="button-container d-flex justify-content-center">
-    <a href="https://www.ilovepdf.com/word_to_pdf" class="btn btn-danger btn-lg" target="_blank">Word to PDF</a>
-    <a href="https://www.ilovepdf.com/image_to_pdf" class="btn btn-danger btn-lg" target="_blank">Image to PDF</a>
-    <a href="https://www.ilovepdf.com/pdf_to_word" class="btn btn-danger btn-lg" target="_blank">PDF to Word</a>
-    <a href="https://www.ilovepdf.com/pdf_to_image" class="btn btn-danger btn-lg" target="_blank">PDF to Image</a>
-    <a href="https://www.ilovepdf.com/merge_pdf" class="btn btn-danger btn-lg" target="_blank">Merge PDF</a>
-    <a href="https://www.ilovepdf.com/split_pdf" class="btn btn-danger btn-lg" target="_blank">Split PDF</a>
-    <a href="https://www.ilovepdf.com/excel_to_pdf" class="btn btn-danger btn-lg" target="_blank">Excel to PDF</a>
-    <a href="https://www.ilovepdf.com/pdf_to_excel" class="btn btn-danger btn-lg" target="_blank">PDF to Excel</a>
-    <a href="https://www.ilovepdf.com/unlock_pdf" class="btn btn-danger btn-lg" target="_blank">Unlock PDF</a>
-    <a href="https://www.ilovepdf.com/protect_pdf" class="btn btn-danger btn-lg" target="_blank">Protect PDF</a>
-  </div>
-  <div class="additional-info">
-    <h2>Why Use Our Converter?</h2>
-    <p>Our online file converter is user-friendly and fast. Convert your documents securely without any hassle.</p>
-    <div class="d-flex justify-content-center flex-wrap">
-      <div class="text-center mx-3">
-        <i class="fas fa-file-word icon"></i>
-        <p>Convert Word Files</p>
-      </div>
-      <div class="text-center mx-3">
-        <i class="fas fa-file-image icon"></i>
-        <p>Convert Images to PDF</p>
-      </div>
-      <div class="text-center mx-3">
-        <i class="fas fa-file-pdf icon"></i>
-        <p>Manage Your PDFs</p>
-      </div>
-      <div class="text-center mx-3">
-        <i class="fas fa-file-excel icon"></i>
-        <p>Convert Excel Files</p>
+  <div class="container">
+    <div class="header">
+      <h1>File Converter</h1>
+      <p>Simple and fast file conversion</p>
+    </div>
+    <div class="button-container d-flex justify-content-center">
+      <a href="https://www.ilovepdf.com/word_to_pdf" class="btn btn-danger btn-lg" target="_blank">Word to PDF</a>
+      <a href="https://www.ilovepdf.com/image_to_pdf" class="btn btn-danger btn-lg" target="_blank">Image to PDF</a>
+      <a href="https://www.ilovepdf.com/pdf_to_word" class="btn btn-danger btn-lg" target="_blank">PDF to Word</a>
+      <a href="https://www.ilovepdf.com/pdf_to_image" class="btn btn-danger btn-lg" target="_blank">PDF to Image</a>
+      <a href="https://www.ilovepdf.com/merge_pdf" class="btn btn-danger btn-lg" target="_blank">Merge PDF</a>
+      <a href="https://www.ilovepdf.com/split_pdf" class="btn btn-danger btn-lg" target="_blank">Split PDF</a>
+      <a href="https://www.ilovepdf.com/excel_to_pdf" class="btn btn-danger btn-lg" target="_blank">Excel to PDF</a>
+      <a href="https://www.ilovepdf.com/pdf_to_excel" class="btn btn-danger btn-lg" target="_blank">PDF to Excel</a>
+      <a href="https://www.ilovepdf.com/unlock_pdf" class="btn btn-danger btn-lg" target="_blank">Unlock PDF</a>
+      <a href="https://www.ilovepdf.com/protect_pdf" class="btn btn-danger btn-lg" target="_blank">Protect PDF</a>
+    </div>
+    <div class="additional-info mt-4">
+      <h2>Why Use Our Converter?</h2>
+      <p>Our online file converter is user-friendly and fast. Convert your documents securely without any hassle.</p>
+      <div class="d-flex justify-content-center flex-wrap">
+        <div class="text-center mx-3">
+          <i class="fas fa-file-word icon"></i>
+          <p>Convert Word Files</p>
+        </div>
+        <div class="text-center mx-3">
+          <i class="fas fa-file-image icon"></i>
+          <p>Convert Images to PDF</p>
+        </div>
+        <div class="text-center mx-3">
+          <i class="fas fa-file-pdf icon"></i>
+          <p>Manage Your PDFs</p>
+        </div>
+        <div class="text-center mx-3">
+          <i class="fas fa-file-excel icon"></i>
+          <p>Convert Excel Files</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="footer">
-    <p>Thank you for using our service!</p>
+    <div class="footer mt-4">
+      <p>Thank you for using our service!</p>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
