@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Converter - Seamless PDF Solutions</title> <!-- Judul lebih elegan -->
+  <title>File Converter - Seamless PDF Solutions</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
   <style>
@@ -27,8 +27,10 @@
       display: inline-block;
       padding-right: 10px;
       overflow: hidden; /* Agar animasi teks dapat terlihat */
-      max-width: 90%; /* Membatasi lebar untuk responsif */
+      max-width: calc(100% - 40px); /* Membatasi lebar untuk responsif dengan margin samping */
       margin: 0 auto; /* Pusatkan teks di dalam header */
+      padding-left: 20px; /* Padding kiri untuk menjauhkan dari tepi */
+      padding-right: 20px; /* Padding kanan untuk menjauhkan dari tepi */
     }
     .header p {
       font-size: 1.2rem; /* Ukuran teks subtitle */
@@ -106,6 +108,7 @@
       letter-spacing: 0.1em; /* Jarak antar huruf */
       animation: typing 4s steps(22, end) infinite, blink-caret 0.75s step-end infinite;
       width: fit-content; /* Lebar otomatis mengikuti konten */
+      padding-right: 20px; /* Padding kanan untuk menjauhkan dari tepi */
     }
 
     /* Efek mengetik */
@@ -172,24 +175,24 @@
         <span class="btn-description">Extract data from PDFs into Excel spreadsheets.</span>
       </a>
       <a href="https://www.ilovepdf.com/unlock_pdf" class="btn" target="_blank">
-        <span class="btn-icon"><i class="fas fa-lock-open"></i></span>
+        <span class="btn-icon"><i class="fas fa-unlock-alt"></i></span>
         <span class="btn-text">Unlock PDF</span>
-        <span class="btn-description">Remove password protection from your PDF files.</span>
+        <span class="btn-description">Remove restrictions from your PDF files quickly.</span>
       </a>
       <a href="https://www.ilovepdf.com/compress_pdf" class="btn" target="_blank">
         <span class="btn-icon"><i class="fas fa-compress"></i></span>
         <span class="btn-text">Compress PDF</span>
         <span class="btn-description">Reduce the file size of your PDFs without losing quality.</span>
       </a>
-      <a href="https://www.ilovepdf.com/add_page_numbers" class="btn" target="_blank">
-        <span class="btn-icon"><i class="fas fa-plus-square"></i></span>
-        <span class="btn-text">Add Page Numbers</span>
-        <span class="btn-description">Easily add page numbers to your PDF files.</span>
-      </a>
       <a href="https://www.ilovepdf.com/convert_pdf_to_pdfa" class="btn" target="_blank">
         <span class="btn-icon"><i class="fas fa-file-pdf"></i></span>
         <span class="btn-text">Convert PDF to PDF/A</span>
         <span class="btn-description">Make your PDFs compliant with PDF/A standards.</span>
+      </a>
+      <a href="https://www.ilovepdf.com/protect_pdf" class="btn" target="_blank">
+        <span class="btn-icon"><i class="fas fa-lock"></i></span>
+        <span class="btn-text">Protect PDF</span>
+        <span class="btn-description">Secure your PDF with a password.</span>
       </a>
     </div>
 
@@ -200,7 +203,7 @@
     </div>
 
     <div class="footer">
-      &copy; 2024 File Converter. All rights reserved-izun.
+      &copy; 2024 File Converter. All rights reserved.
     </div>
   </div>
 
