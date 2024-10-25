@@ -3,33 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Converter - Seamless PDF Solutions</title> <!-- Judul lebih elegan -->
+  <title>File Converter - Seamless PDF Solutions</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
     body {
-      background-color: #f8f9fa; /* Warna latar belakang */
+      background-color: #f8f9fa;
     }
     .header {
-      background: linear-gradient(135deg, #d9534f, #c9302c); /* Gradient merah */
+      background: linear-gradient(135deg, #d9534f, #c9302c);
       color: white;
       padding: 20px;
       text-align: center;
-      border-radius: 10px; /* Sudut melengkung */
-      margin-bottom: 20px; /* Jarak bawah header */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       position: relative;
     }
     .header h1 {
-      font-weight: 400; /* Font tetap seperti sebelumnya */
-      font-size: 2rem; /* Ukuran sesuai permintaan */
-      margin-bottom: 10px; /* Jarak di bawah judul */
+      font-weight: 400;
+      font-size: 2rem;
+      margin-bottom: 10px;
       display: inline-block;
       padding-right: 10px;
-      overflow: hidden; /* Agar animasi teks dapat terlihat */
+      overflow: hidden;
     }
     .header p {
-      font-size: 1.2rem; /* Ukuran teks subtitle */
+      font-size: 1.2rem;
     }
     .header::after {
       content: '';
@@ -39,50 +39,72 @@
       background-color: white;
       margin: 0 auto;
       margin-top: 10px;
-      border-radius: 2px; /* Garis bawah dekoratif */
+      border-radius: 2px;
     }
     .button-container {
-      text-align: center;
-      flex-wrap: wrap; /* Agar tombol bisa dibungkus jika terlalu banyak */
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
     }
     .btn {
-      width: 200px; /* Lebar tombol yang lebih besar */
-      height: 50px; /* Tinggi tombol */
-      font-size: 1em; /* Ukuran font yang lebih besar */
-      margin: 10px; /* Jarak antar tombol */
-      transition: transform 0.2s; /* Animasi transisi */
+      position: relative;
+      text-align: left;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
     }
     .btn:hover {
-      transform: scale(1.05); /* Efek zoom saat hover */
+      background-color: #f8f9fa;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    .btn-icon {
+      font-size: 1.5em;
+      color: #d9534f;
+      margin-right: 15px;
+    }
+    .btn-text {
+      display: block;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    .btn-description {
+      font-size: 0.9em;
+      color: #777;
     }
     .additional-info {
       text-align: center;
       padding: 20px;
-      background-color: #ffffff; /* Warna latar belakang putih */
+      background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 800px; /* Lebar maksimum untuk info tambahan */
-      margin: 0 auto; /* Pusatkan di halaman */
-    }
-    .icon {
-      font-size: 40px; /* Ukuran ikon */
-      color: #d9534f; /* Warna ikon */
+      max-width: 800px;
+      margin: 0 auto;
     }
     .footer {
       padding: 10px;
       text-align: center;
       font-size: 0.9em;
       margin-top: 20px;
-      color: #777; /* Warna teks footer */
+      color: #777;
     }
 
     /* Style untuk animasi typewriter yang diulang-ulang */
     .typewriter h1 {
       border-right: 2px solid white; /* Garis kursor */
       white-space: nowrap; /* Teks tetap di satu baris */
-      margin: 0 auto;
+      margin: 0 auto; /* Pusatkan teks */
       letter-spacing: 0.1em; /* Jarak antar huruf */
       animation: typing 4s steps(22, end) infinite, blink-caret 0.75s step-end infinite;
+      max-width: 24%; /* Batasi lebar maksimum untuk animasi */
+      overflow: hidden; /* Sembunyikan teks yang melebihi batas */
     }
 
     /* Efek mengetik */
@@ -102,49 +124,68 @@
   <div class="container">
     <div class="header">
       <div class="typewriter">
-        <h1><i class="fas fa-file-pdf"></i> File Converter</h1> <!-- Menambahkan ikon PDF di judul dengan animasi -->
+        <h1><i class="fas fa-file-pdf"></i> File Converter</h1>
       </div>
-      <p>Convert files with ease and precision</p> <!-- Subtitle lebih elegan -->
+      <p>Convert files with ease and precision</p>
     </div>
-    <div class="button-container d-flex justify-content-center">
-      <a href="https://www.ilovepdf.com/word_to_pdf" class="btn btn-danger btn-lg" target="_blank">Word to PDF</a>
-      <a href="https://www.ilovepdf.com/image_to_pdf" class="btn btn-danger btn-lg" target="_blank">Image to PDF</a>
-      <a href="https://www.ilovepdf.com/pdf_to_word" class="btn btn-danger btn-lg" target="_blank">PDF to Word</a>
-      <a href="https://www.ilovepdf.com/pdf_to_image" class="btn btn-danger btn-lg" target="_blank">PDF to Image</a>
-      <a href="https://www.ilovepdf.com/merge_pdf" class="btn btn-danger btn-lg" target="_blank">Merge PDF</a>
-      <a href="https://www.ilovepdf.com/split_pdf" class="btn btn-danger btn-lg" target="_blank">Split PDF</a>
-      <a href="https://www.ilovepdf.com/excel_to_pdf" class="btn btn-danger btn-lg" target="_blank">Excel to PDF</a>
-      <a href="https://www.ilovepdf.com/pdf_to_excel" class="btn btn-danger btn-lg" target="_blank">PDF to Excel</a>
-      <a href="https://www.ilovepdf.com/unlock_pdf" class="btn btn-danger btn-lg" target="_blank">Unlock PDF</a>
-      <a href="https://www.ilovepdf.com/protect_pdf" class="btn btn-danger btn-lg" target="_blank">Protect PDF</a>
-    </div>
-    <div class="additional-info mt-4">
-      <h2>Why Choose Us?</h2>
-      <p>Our online file converter is user-friendly and fast. Convert your documents securely without any hassle.</p>
-      <div class="d-flex justify-content-center flex-wrap">
-        <div class="text-center mx-3">
-          <i class="fas fa-file-word icon"></i>
-          <p>Convert Word Files</p>
-        </div>
-        <div class="text-center mx-3">
-          <i class="fas fa-file-image icon"></i>
-          <p>Convert Images to PDF</p>
-        </div>
-        <div class="text-center mx-3">
-          <i class="fas fa-file-pdf icon"></i>
-          <p>Manage Your PDFs</p>
-        </div>
-        <div class="text-center mx-3">
-          <i class="fas fa-file-excel icon"></i>
-          <p>Convert Excel Files</p>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <p>© 2024 File Converter. All rights reserved.</p>
-    </div>
-  </div>
 
+    <div class="button-container">
+      <a href="https://www.ilovepdf.com/word_to_pdf" class="btn" target="_blank">
+        <span class="btn-icon"><i class="fas fa-file-word"></i></span>
+        <span class="btn-text">Word to PDF</span>
+        <span class="btn-description">Make DOC and DOCX files easy to read by converting them to PDF.</span>
+      </a>
+      <a href="https://www.ilovepdf.com/image_to_pdf" class="btn" target="_blank">
+        <span class="btn-icon"><i class="fas fa-file-image"></i></span>
+        <span class="btn-text">Image to PDF</span>
+        <span class="btn-description">Convert images like JPG to PDF easily.</span>
+      </a>
+      <a href="https://www.ilovepdf.com/pdf_to_word" class="btn" target="_blank">
+        <span class="btn-icon"><i class="fas fa-file-pdf"></i></span>
+        <span class="btn-text">PDF to Word</span>
+        <span class="btn-description">Convert PDFs into editable DOC or DOCX files.</span>
+      </a>
+      <a href="https://www.ilovepdf.com/pdf_to_image" class="btn" target="_blank">
+        <span class="btn-icon"><i class="fas fa-image"></i></span>
+        <span class="btn-text">PDF to Image</span>
+        <span class="btn-description">Extract images or convert PDFs to image formats.</span>
+      </a>
+      <a href="https://www.ilovepdf.com/merge_pdf" class="btn" target="_blank">
+        <span class="btn-icon"><i class="fas fa-compress-arrows-alt"></i></span>
+        <span class="btn-text">Merge PDF</span>
+        <span class="btn-description">Combine multiple PDFs into one seamless document.</span>
+      </a>
+      <a href="https://www.ilovepdf.com/split_pdf" class="btn" target="_blank">
+        <span class="btn-icon"><i class="fas fa-cut"></i></span>
+        <span class="btn-text">Split PDF</span>
+        <span class="btn-description">Separate pages from your PDF file easily.</span>
+      </a>
+      <a href="https://www.ilovepdf.com/excel_to_pdf" class="btn" target="_blank">
+        <span class="btn-icon"><i class="fas fa-file-excel"></i></span>
+        <span class="btn-text">Excel to PDF</span>
+        <span class="btn-description">Convert Excel spreadsheets into PDF documents.</span>
+      </a>
+      <a href="https://www.ilovepdf.com/pdf_to_excel" class="btn" target="_blank">
+        <span class="btn-icon"><i class="fas fa-file-excel"></i></span>
+        <span class="btn-text">PDF to Excel</span>
+        <span class="btn-description">Extract data from PDFs into Excel spreadsheets.</span>
+      </a>
+      <a href="https://www.ilovepdf.com/unlock_pdf" class="btn" target="_blank">
+        <span class="btn-icon"><i class="fas fa-lock-open"></i></span>
+        <span class="btn-text">Unlock PDF</span>
+        <span class="btn-description">Remove passwords from protected PDF files.</span>
+      </a>
+    </div>
+
+    <div class="additional-info">
+      <h3>Additional Information</h3>
+      <p>Welcome to our PDF converter service! We aim to provide you with a fast and reliable way to convert various file formats.</p>
+    </div>
+    
+    <footer class="footer">
+      <p>&copy; 2024 File Converter. All rights reserved-izun.</p>
+    </footer>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
