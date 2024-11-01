@@ -7,8 +7,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
   <style>
-    body {
-      background-color: #f8f9fa; /* Warna latar belakang */
+     body {
+      background-color: #1b1b1b;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(241, 234, 234, 0.7)), 
+                        url('https://img.icons8.com/ios-filled/50/FFA500/bat.png'); /* Ganti dengan URL gambar Halloween */
+      background-size: cover;
+      background-attachment: fixed;
+      color: #f5f5f5;
     }
     .header {
       background: linear-gradient(135deg, #d9534f, #c9302c); /* Gradient merah */
@@ -100,12 +105,12 @@
 
     /* Style untuk animasi typewriter yang diulang-ulang */
     .typewriter h1 {
-      border-right: 2px solid white; /* Garis kursor */
-      white-space: nowrap; /* Teks tetap di satu baris */
+      border-right: 2px solid white;
+      white-space: nowrap;
       margin: 0 auto;
-      letter-spacing: 0.1em; /* Jarak antar huruf */
+      letter-spacing: 0.1em;
       animation: typing 4s steps(22, end) infinite, blink-caret 0.75s step-end infinite;
-      width: fit-content; /* Lebar otomatis mengikuti konten */
+      width: fit-content;
     }
 
     /* Efek mengetik */
@@ -125,9 +130,9 @@
   <div class="container">
     <div class="header">
       <div class="typewriter">
-        <h1><i class="fas fa-file-pdf"></i> File Converter</h1> <!-- Menambahkan ikon PDF di judul dengan animasi -->
+        <h1><i class="fas fa-ghost"></i> File Converter</h1>
       </div>
-      <p>Convert files with ease and precision</p> <!-- Subtitle lebih elegan -->
+      <p>Convert files with a spooky touch!</p>
     </div>
 
     <div class="button-container">
@@ -207,3 +212,139 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> <!-- Bundle JavaScript -->
 </body>
 </html>
+/////
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Converter - Seamless PDF Solutions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Background Halloween */
+    body {
+      background-color: #1b1b1b;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://www.example.com/halloween-background.jpg'); /* Ganti dengan URL gambar Halloween */
+      background-size: cover;
+      background-attachment: fixed;
+      color: #f5f5f5;
+    }
+
+    /* Header dengan warna oranye dan hitam */
+    .header {
+      background: linear-gradient(135deg, #ff7518, #a52a2a);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .header h1 {
+      font-weight: 400;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      display: inline-block;
+      padding-right: 10px;
+      overflow: hidden;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    /* Efek typewriter */
+    .typewriter h1 {
+      border-right: 2px solid white;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 0.1em;
+      animation: typing 4s steps(22, end) infinite, blink-caret 0.75s step-end infinite;
+      width: fit-content;
+    }
+
+    @keyframes typing {
+      0% { width: 0 }
+      100% { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
+    }
+
+    /* Button Style */
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .btn {
+      position: relative;
+      text-align: left;
+      background-color: #1e1e1e;
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      color: #f5f5f5;
+    }
+
+    .btn:hover {
+      background-color: #333;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-icon {
+      font-size: 1.5em;
+      color: #ff7518;
+      margin-right: 15px;
+    }
+
+    .btn-text {
+      display: block;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #f5f5f5;
+      margin-bottom: 5px;
+    }
+
+    .btn-description {
+      font-size: 0.9em;
+      color: #bbb;
+    }
+
+    /* Info tambahan */
+    .additional-info {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 20px;
+      color: #bbb;
+    }
+  </style>
+</head>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
